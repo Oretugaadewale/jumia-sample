@@ -1,0 +1,221 @@
+<!DOCTYPE type>
+<html lang="en">
+<head>
+  <title>jumia mini project</title>
+
+   <!--required meta tags-->
+  <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+   <!--boostrap css-->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+<link href="fontawesome/css/all.css" rel="stylesheet">
+ 
+ <style type="text/css">
+ div{
+  border:0px solid red; 
+  min-height:90px;
+ }
+#header{
+font-weight:bold;
+}
+ </style>
+         
+</head>
+  <body>
+  <h3 style="margin-left:100px">Adewale store...</h3>
+  <p style="text-align:center; font-weight:bold;">Our store is currently running a promo for online shoppers,there will be a VALENTINE'S DAY prize draw for customer who purchase goods up to 20,000 or  purchase 10 items in one transaction</p>
+    <!--container-->
+   <div class="container">
+   
+      <!--first-->
+	
+     <div class="row">
+	  <div class="col-12">
+		<div class="row" id="header" style="border-bottom: 1px solid black;">
+		 <div class="col-3"><p style="text-align:center">Item</P></div>
+		  <div class="col-3"><p style="text-align:center">Quantity</P></div>
+		   <div class="col-3"><p style="text-align:center">Price</P></div>
+		    <div class="col-3"><p style="text-align:center">Check</P></div>
+		  
+		</div>
+		</div>
+	<!--  content 2 -->
+	 <div class="col-12">
+		<div class="row">
+		 <div class="col-3" align="center";>
+		 <img src="./img/sh1.jpg" height="100px" width="50%" alt="shirt" class="img-fluid mb-2 mt-3" >
+		 </div>
+		  <div class="col-3">
+		  <form>
+		  <select class="form-control mt-5" id="qu1" onchange="total1();">
+		    <option value=''>Select Quantity</option>
+		    <option value=1>1</option>
+		     <option value=2>2</option>
+		      <option value=3>3</option>
+		       <option value=4>4</option>
+			   </select>
+		  </form>
+		  </div>
+		   <div class="col-3">
+			<form>
+				<input type="text" class="form-control mt-5" id="price1" onchange="total1();">
+			</form>
+		   </div>
+		    <div class="col-3 mt-5" id="tot1"></div>
+		  
+		</div>
+		</div>
+	<!-- content 3 -->
+	 <div class="col-12">
+		<div class="row">
+		 <div class="col-3" align="center";>
+		 <img src="./img/sh2.jpg" height="100px" width="50%" alt="shirt" class="img-fluid mb-2">
+		 </div>
+		  <div class="col-3">
+		  <form>
+				<select class="form-control mt-5" id="qu2" onchange="total2();">
+				<option value=''>Select Quantity</option>
+		    <option value=1>1</option>
+		     <option value=2>2</option>
+		      <option value=3>3</option>
+		       <option value=4>4</option>
+			    
+		  </select>
+		  </form>
+		  </div>
+		   <div class="col-3">
+			<input type="text" class="form-control mt-5" id="price2" onchange="total2();">
+			</div>
+		   
+		    <div class="col-3 mt-5" id="tot2"></div>
+		  
+		</div>
+		</div>
+	<!-- content four -->
+	 <div class="col-12">
+		<div class="row">
+		 <div class="col-3" align="center";>
+		 <img src="./img/sh3.jpg" height="100px" width="50%" alt="shirt" class="img-fluid mb-2" >
+		 </div>
+		  <div class="col-3">
+		  <form>
+		  <select class="form-control mt-5" id="equ" onchange="totala();">
+		    <option value=''>Select Quantity</option>
+		    <option value=1>1</option>
+		     <option value=2>2</option>
+		      <option value=3>3</option>
+		       <option value=4>4</option>
+		  </select>
+		  </form>
+		  </div>
+		   <div class="col-3">
+					<input type="text" class="form-control mt-5" id="price3" onchange="totala();">
+		   </div>
+		    <div class="col-3 mt-5" id="totl3"></div>
+		  
+		</div>
+		</div>
+		
+	  </div>
+	 
+     <!--second-->
+   <div class="row">
+	 <div class="col">
+		    <button type='button'class="btn btn-danger form-control mt-2" 
+			onclick="validate();">Enter Prize Draw</button>		<form>
+		</form>
+		</div>
+	  </div>
+       
+	   <!--third-->
+        <div class="row">
+	 <div class="col" id="draw">
+		<div class="row">
+		<div class="col-2" id='confirm1'></div>
+		<div class="col-10" id='confirm2'></div>
+		</div>
+		</div>
+	  </div>
+   
+   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+        <!--boostrap Js -->
+	<script type="text/javascript" language="javascript">
+		function total1(){
+		  var shirt= document.getElementById('qu1').value;
+		  var pricea= document.getElementById('price1').value;
+		  sum = shirt * pricea;
+		  document.getElementById('tot1').innerHTML = sum;
+	}
+	
+	   function total2(){
+	     var cloth= document.getElementById('qu2').value;
+	     var priceb=document.getElementById('price2').value;
+		   sum = cloth * priceb;
+		   document.getElementById('tot2').innerHTML = sum;
+	}
+	
+	function totala(){
+	     var skirt= document.getElementById('equ').value;
+         var pricec= document.getElementById('price3').value;
+		 sum = skirt * pricec;
+		 document.getElementById('totl3').innerHTML = sum;
+		 
+		 }
+	
+	
+	   function validate(){
+	    var texta = document.getElementById('tot1').innerHTML;
+		var textb = document.getElementById('tot2').innerHTML;
+		var textc = document.getElementById('totl3').innerHTML;
+		var next1 = document.getElementById('qu1').value;
+		var next2 = document.getElementById('qu2').value;
+		var next3 = document.getElementById('equ').value;
+		var next4 = document.getElementById('price1').value;
+		var next5 = document.getElementById('price2').value;
+		var next6 = document.getElementById('price3').value;
+		var alltext= Number(texta)+Number(textb)+Number(textc);
+	     var allnext=Number(next1)+Number(next2)+Number(next3);
+		 var average = alltext/allnext;
+		 var qualify ="<img src='img/qualified.jpeg'>";
+		 var confirm ="<img src='img/try.png'>";
+		  var congratulations = ('congratulations, you are qualified for our valentine promo, you are purchasing ' +allnext+ ' items, the total amount been spent is ' +alltext+ ' and an average of ' +average+ ' naira' );
+		  var unqualify = ('not qualify, you are purchasing a total of ' +allnext+ ' items, the total amount been spent is ' +alltext+ ' and an average of ' +average+ ' naira' );
+		  if (next1 && next4 ==''){
+		  alert('kindly input a field')
+		  }
+		 else if (next2 && next5 ==''){
+		  alert('kindly input a field')
+		  }
+		 else if (next3 && next5 ==''){
+		  alert('kindly input a field')
+		  }
+		 else if (next4 =='' && next5 =='' && next6 ==''){
+		  alert('kindly input a field')
+		  }
+		  
+		  else if (allnext >=10 || (alltext >= 20000)){
+		  document.getElementById('confirm1').innerHTML=qualify;
+		  document.getElementById('confirm2').innerHTML=congratulations;
+		  }
+		  else{document.getElementById('confirm1').innerHTML=confirm;
+		  document.getElementById('confirm2').innerHTML=unqualify;
+		  
+	   }
+	
+	   }
+</script>
+</body>
+</html>
+

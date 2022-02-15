@@ -1,0 +1,5 @@
+#remove bootstrap
+bootstrap/
+
+#remove fontawesome
+fontawesome/
